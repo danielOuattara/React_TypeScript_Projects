@@ -1,0 +1,31 @@
+import { useEffect } from "react";
+import UsersList from "./components/UsersList";
+import SingleUser from "./components/SingleUser";
+import useFetchingUsers from "./composable/useFetchingUsers";
+import useFetchingSingleUser from "./composable/useFetchingSingleUser";
+
+export default function AppFunction() {
+  //------------------------------------
+
+  const { usersFetchedState, fetchingUsers } = useFetchingUsers();
+  useEffect(() => {
+    fetchingUsers();
+  }, []);
+  console.log(usersFetchedState);
+
+  //--------------------------------------
+
+  const { singleState, fetchSingleUser } = useFetchingSingleUser();
+  console.log(singleState);
+
+  return (
+    <>
+      <h2>function component</h2>
+      <SingleUser singleState={singleState} fetchSingleUser={fetchSingleUser} />
+      <UsersList
+        users={usersFetchedState.users}
+        fetchSingleUser={fetchSingleUser}
+      />
+    </>
+  );
+}
