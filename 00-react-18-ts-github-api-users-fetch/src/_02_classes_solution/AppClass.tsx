@@ -21,6 +21,15 @@ export type GlobalStateType = {
 const url = "https://api.github.com/users";
 
 //-------------------------------------------------------
+
+/*  IMPORTANT: global state type definition is incomplete: missing Props definition in line 33
+
+    Solution is to define directly the type of state in front of the state
+    state: StateType OR StateInterface =  { ... }
+
+    See AppClassV2 in  /_02_classes_solution_v2
+
+*/
 export default class AppClass extends Component<GlobalStateType> {
   state = {
     usersState: {
