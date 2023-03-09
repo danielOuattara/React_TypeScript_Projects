@@ -8,7 +8,7 @@ export default class AppClass extends Component {
         <section className="container">
           <div className="title">
             <h2> our reviews</h2>
-            <h4> react typescript functional solution</h4>
+            <h4> react typescript class solution</h4>
             <div className="underline"></div>
           </div>
           <ReviewClass />
