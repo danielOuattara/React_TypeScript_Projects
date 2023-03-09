@@ -7,7 +7,6 @@ type PersonProps = {
 
 export default class UserListItemClass extends Component<PersonProps> {
   render() {
-    console.log(this.props);
     return (
       <li>
         <img src={this.props.person.avatar_url} alt={this.props.person.login} />
