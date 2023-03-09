@@ -89,7 +89,7 @@ export default function AppClass() {
 
   return (
     <section className="section-center ">
-      <p>react typescript function solution version 1</p>
+      <p>react + typescript function solution version 1</p>
 
       <form className="grocery-form" onSubmit={handleSubmitItem}>
         {/* {alert.show && <AlertFunction {...alert} />} */}
