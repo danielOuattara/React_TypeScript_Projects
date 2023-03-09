@@ -1,4 +1,4 @@
-import UserType from "./../types/UserType";
+// import UserType from "./../types/UserType";
 import { useState } from "react";
 import { StateType } from "../composable/useFetchingSingleUser";
 
@@ -45,10 +45,9 @@ export default function SingleUser(props: PropsType) {
         </button>
       </form>
 
-      {/* <h3 v-if="Object.entries(singleUserData).length != 0">User infos :</h3> */}
-      {/* <h2 v-if="!singleUserLoading && !singleUserError">User infos :</h2> */}
-
-      <h2>User infos :</h2>
+      {Object.entries(props.singleState.singleUserData).length !== 0 && (
+        <h3>User infos :</h3>
+      )}
       <ul>
         {Object.entries(props.singleState.singleUserData).map((subArray) => {
           const [key, value] = subArray;

@@ -16,11 +16,10 @@ export default function AppFunction() {
   //--------------------------------------
 
   const { singleState, fetchSingleUser } = useFetchingSingleUser();
-  console.log(singleState);
 
   return (
     <>
-      <h2>function component</h2>
+      <h2>react + typescript function solution version 1: using composable</h2>
       <SingleUser singleState={singleState} fetchSingleUser={fetchSingleUser} />
       <UsersList
         users={usersFetchedState.users}
