@@ -1,5 +1,4 @@
 type UserType = {
-  map(arg0: (person: UserType) => JSX.Element): import("react").ReactNode;
   login: string;
   id: number | string;
   node_id: string;
