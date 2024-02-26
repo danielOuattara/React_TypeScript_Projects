@@ -1,17 +1,12 @@
-import PersonType from "./types/PersonType";
+export default function ListFunction({
+  people,
+  handleRemoveOnePerson,
+}: TypeListProps) {
+  const target = people.length > 1 ? `friends` : `friend`;
 
-type ListProps = {
-  people: PersonType[];
-  handleRemoveOnePerson: Function;
-};
-
-function ListFunction({ people, handleRemoveOnePerson }: ListProps) {
   return (
     <>
-      {people.length > 1 && <h2 className="h2_styled">friends to contact</h2>}
-      {/*  */}
-      {people.length === 1 && <h2 className="h2_styled">friend to contact</h2>}
-      {/*  */}
+      {people.length > 0 && <h2 className="h2_styled">{target} to contact</h2>}
       {people.map((person) => {
         const { id, name, age, image } = person;
         return (
@@ -33,5 +28,3 @@ function ListFunction({ people, handleRemoveOnePerson }: ListProps) {
     </>
   );
 }
-
-export default ListFunction;
