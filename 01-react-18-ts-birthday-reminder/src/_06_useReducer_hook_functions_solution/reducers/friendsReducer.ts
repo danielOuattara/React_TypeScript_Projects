@@ -1,8 +1,7 @@
-import data from "./../../data";
-
-const initialState = data;
-
-export const friendsReducer = (state = initialState, action) => {
+export const friendsReducer = (
+  state: TypeFriendsState,
+  action: TypeFriendsAction,
+) => {
   switch (action.type) {
     case "REMOVE_FRIEND":
       return state.filter((person) => person.id !== action.payload);
@@ -11,7 +10,7 @@ export const friendsReducer = (state = initialState, action) => {
       return (state = []);
 
     case "RESET_ALL_FRIENDS":
-      return (state = initialState);
+      return (state = action.payload);
 
     default:
       return state;
