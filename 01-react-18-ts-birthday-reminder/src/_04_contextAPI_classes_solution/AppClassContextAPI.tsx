@@ -1,12 +1,13 @@
 import React from "react";
 import FriendsContextProvider from "./contextClass/FriendsContext";
-import ContainerClass from "./ContainerClass";
-function AppClassContextAPI() {
+import Container from "./ContainerClass";
+
+function AppContextAPI() {
   return (
     <FriendsContextProvider>
-      <ContainerClass />
+      <Container />
     </FriendsContextProvider>
   );
 }
 
-export default AppClassContextAPI;
+export default AppContextAPI;
