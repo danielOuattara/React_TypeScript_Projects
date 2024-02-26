@@ -1,12 +1,10 @@
 import FriendsContextProvider from "./context/FriendsContext";
 import Container from "./Container";
 
-function AppContextAPIUsereducer() {
+export default function AppFunctionContextAPIUseContextHook() {
   return (
     <FriendsContextProvider>
       <Container />
     </FriendsContextProvider>
   );
 }
-
-export default AppContextAPIUsereducer;
