@@ -1,12 +1,6 @@
-import React, { Component } from "react";
-import PersonType from "./types/PersonType";
+import { Component } from "react";
 
-type ListProps = {
-  people: PersonType[];
-  handleRemoveOnePerson: Function;
-};
-
-export default class ListFunction extends Component<ListProps> {
+export default class ListFunction extends Component<TypeListPropsClass> {
   render() {
     return (
       <>
@@ -19,15 +13,14 @@ export default class ListFunction extends Component<ListProps> {
         )}
         {/*  */}
         {this.props.people.map((person) => {
-          const { id, name, age, image } = person;
           return (
-            <article key={id} className="person article_styled">
-              <img src={image} alt={name} />
+            <article key={person.id} className="person article_styled">
+              <img src={person.image} alt={person.name} />
               <div>
-                <h4>{name}</h4>
-                <p>{age} years</p>
+                <h4>{person.name}</h4>
+                <p>{person.age} years</p>
                 <button
-                  onClick={() => this.props.handleRemoveOnePerson(id)}
+                  onClick={() => this.props.handleRemoveOnePerson(person.id)}
                   className="btn_styled"
                 >
                   Event Finished

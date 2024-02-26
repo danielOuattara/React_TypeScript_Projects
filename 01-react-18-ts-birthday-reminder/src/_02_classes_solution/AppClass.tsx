@@ -2,16 +2,6 @@ import { Component } from "react";
 import data from "../data";
 import List from "./ListFunction";
 
-type PersonType = {
-  people: {
-    id: string;
-    name: string;
-    age: number;
-    image: string;
-  };
-  country: string;
-};
-
 export default class AppClass extends Component {
   state = {
     people: data,
@@ -19,38 +9,39 @@ export default class AppClass extends Component {
   };
 
   handleEmpty = () => {
-    this.setState((prevState: PersonType["people"]) => ({
+    this.setState((prevState: TypePersonClass) => ({
       ...prevState,
       people: [],
     }));
   };
 
   handleRefresh = () => {
-    this.setState((prevState: PersonType) => ({
+    this.setState((prevState: TypePersonClass) => ({
       ...prevState,
       people: data,
     }));
   };
 
   handleRemoveOnePerson = (id: string) => {
-    this.setState((prevState: PersonType) => ({
+    this.setState((prevState: TypePersonClass) => ({
       ...prevState,
       people: this.state.people.filter((person) => person.id !== id),
     }));
   };
 
   render() {
+    const quantity = this.state.people.length > 1 ? "birthdays" : "birthday";
+
     return (
       <main>
         <section className="container">
           <span> typescript + class component</span>
-          {this.state.people.length > 1 && (
-            <h3>{this.state.people.length} birthdays today</h3>
+          {this.state.people.length >= 0 && (
+            <h3>
+              {this.state.people.length} {quantity} today
+            </h3>
           )}
-          {(this.state.people.length === 1 ||
-            this.state.people.length === 0) && (
-            <h3>{this.state.people.length} birthday today</h3>
-          )}
+
           <List
             people={this.state.people}
             handleRemoveOnePerson={this.handleRemoveOnePerson}
