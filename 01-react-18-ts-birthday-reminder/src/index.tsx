@@ -9,6 +9,7 @@ import AppFunctionContextAPIUseContextHook from "./_05_contextAPI_useContext_sol
 import AppFunctionUserReducer from "./_06_useReducer_hook_functions_solution/AppFunctionUseReducer";
 import AppFunctionUseReducerContextAPI from "./_07_useReducer_context_API_functions_solution/AppFunctionUseReducerContextAPI";
 import AppFunctionUseReducerUseContext from "./_08_useReducer_useContext_hooks_functions_solution/AppFunctionUseReduceruseContext";
+import AppFunctionRedux from "./_09_react_redux_functions_solution/AppFunctionRedux";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
@@ -30,5 +31,7 @@ root.render(
     <AppFunctionUseReducerContextAPI />
     <hr />
     <AppFunctionUseReducerUseContext />
+    <hr />
+    <AppFunctionRedux />
   </React.StrictMode>,
 );
