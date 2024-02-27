@@ -6,6 +6,7 @@ type TypeProps = {
   people: TypeFriendsReduxState;
   handleRemoveOnePerson: (id: string) => void;
 };
+
 function ListFunctionRedux({ people, handleRemoveOnePerson }: TypeProps) {
   return (
     <>
