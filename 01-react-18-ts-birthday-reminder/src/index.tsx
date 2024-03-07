@@ -10,6 +10,9 @@ import AppFunctionUserReducer from "./_06_useReducer_hook_functions_solution/App
 import AppFunctionUseReducerContextAPI from "./_07_useReducer_context_API_functions_solution/AppFunctionUseReducerContextAPI";
 import AppFunctionUseReducerUseContext from "./_08_useReducer_useContext_hooks_functions_solution/AppFunctionUseReduceruseContext";
 import AppFunctionRedux from "./_09_react_redux_functions_solution/AppFunctionRedux";
+import AppClassRedux from "./_10_react_redux_classes_solution/AppClassRedux";
+import AppFunctionReduxToolkit from "./_11_redux_toolkits_functions_solution/AppFunctionReduxToolkit";
+import AppClassReduxToolkit from "./_12_redux_toolkit_classes_solution/AppClassReduxToolkit";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
@@ -33,5 +36,12 @@ root.render(
     <AppFunctionUseReducerUseContext />
     <hr />
     <AppFunctionRedux />
+    <hr />
+    <AppClassRedux />
+    <hr />
+    <AppFunctionReduxToolkit />
+
+    <hr />
+    <AppClassReduxToolkit />
   </React.StrictMode>,
 );
