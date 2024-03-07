@@ -1,9 +1,8 @@
 import { Component } from "react";
 import TourItemClass from "./TourItemClass";
-import GlobalFetchStateType from "../types/GlobalFetchStateType";
 
 type TourClassPropsType = {
-  tours: GlobalFetchStateType["tours"];
+  tours: IGlobalFetchState["tours"];
   removeTourItem: Function;
 };
 

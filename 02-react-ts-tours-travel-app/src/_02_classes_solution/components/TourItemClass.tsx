@@ -1,8 +1,7 @@
 import { Component } from "react";
-import TourType from "../types/TourType";
 
 type TourItemClassProps = {
-  tour: TourType;
+  tour: ITour;
   removeTourItem: Function;
 };
 

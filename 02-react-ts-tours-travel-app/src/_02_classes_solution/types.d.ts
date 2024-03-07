@@ -1,4 +1,4 @@
-interface GlobalFetchStateType {
+interface IGlobalFetchState {
   isLoading: boolean;
   isError: boolean;
   errorMessage: string;
@@ -8,9 +8,15 @@ interface GlobalFetchStateType {
         name: string;
         info: string;
         image: string;
-        price: string;
+        price: number;
       }[]
     | [];
 }
 
-export default GlobalFetchStateType;
+interface ITour {
+  id: string;
+  name: string;
+  info: string;
+  image: string;
+  price: number;
+}

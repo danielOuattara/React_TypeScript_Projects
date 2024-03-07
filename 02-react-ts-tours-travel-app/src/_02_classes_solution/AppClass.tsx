@@ -3,20 +3,19 @@ import ErrorMessage from "./components/ErrorMessage";
 import LoadingClass from "./components/LoadingClass";
 import ResetTours from "./components/ResetTours";
 import ToursClass from "./components/ToursClass";
-import GlobalFetchStateType from "./types/GlobalFetchStateType";
 
 const url = "https://course-api.com/react-tours-project";
 
 export default class AppClass extends Component {
-  state: GlobalFetchStateType = {
+  state: IGlobalFetchState = {
     isLoading: true,
     isError: false,
     errorMessage: "",
     tours: [],
   };
 
-  //-----------------------------------
-  fetchTours = async () => {
+  //--------
+  fetchTours = async (): Promise<void | undefined> => {
     try {
       const res = await fetch(url);
       if (!res.ok) {
@@ -41,24 +40,24 @@ export default class AppClass extends Component {
         isLoading: false,
         isError: true,
       }));
-      return err;
+      return undefined;
     }
   };
 
-  //-----------------------------------
+  //--------
   componentDidMount() {
     this.fetchTours();
   }
 
-  //-----------------------------------
+  //--------
   removeTourItem = (id: string) => {
-    this.setState((prevState: GlobalFetchStateType) => ({
+    this.setState((prevState: IGlobalFetchState) => ({
       ...prevState,
       tours: prevState.tours.filter((item) => item.id !== id),
     }));
   };
 
-  //-----------------------------------
+  //--------
   render() {
     if (this.state.isError) {
       return <ErrorMessage errorMessage={this.state.errorMessage} />;
@@ -81,4 +80,4 @@ export default class AppClass extends Component {
   }
 }
 
-//-----------------------------------
+//--------
