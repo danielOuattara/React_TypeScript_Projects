@@ -7,7 +7,8 @@ import "./index.css";
 // import AppFunctionContextAPI from "./_03_contextAPI_functions_solution_v1/AppFunctionContextAPIV1";
 // import AppFunctionContextAPIV2 from "./_03_contextAPI_functions_solution_v2/AppFunctionContextAPIV2";
 // import AppClassContextAPI from "./_04_contextAPI_classes_solution/AppClassContextAPI";
-import AppClassContextAPIV2 from "./_04_contextAPI_classes_solution v2/AppClassContextAPIV2";
+// import AppClassContextAPIV2 from "./_04_contextAPI_classes_solution v2/AppClassContextAPIV2";
+import AppFunctionContextAPIUseContextHookV1 from "./_05_contextAPI_useContext_hook_functions_v1/AppFunctionContextAPIUseContextHookV1";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
@@ -26,6 +27,9 @@ root.render(
     <hr />
     {/* <AppClassContextAPI /> */}
     <hr />
-    <AppClassContextAPIV2 />
+    {/* <AppClassContextAPIV2 /> */}
+    <hr />
+    <AppFunctionContextAPIUseContextHookV1 />
+    <hr />
   </React.StrictMode>,
 );
